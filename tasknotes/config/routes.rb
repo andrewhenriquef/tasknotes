@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  devise_for :users
+    get 'tasks/index'
+    
+    #/tasks/new(.:format)	tasks#new
+    post "/tasks/new" => "tasks#new"
+    
+    #GET	/tasks/:id/edit(.:format)	tasks#edit
+    post "/tasks/:id/edit" => "tasks#edit"
+    
+    #/tasks/:id(.:format)                     tasks#show
+
+    post "/tasks/:id" => "tasks#show"
+    
+    resources :tasks do
+        resources :notes
+    end
+    
+    root 'tasks#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

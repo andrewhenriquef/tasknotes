@@ -1,0 +1,14 @@
+
+<%= form_for @task do |f| %>
+ 
+  <p>
+    <%= f.label :activity %><br>
+    <%= f.text_field :activity %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.submit :save %>
+  </p>
+ 
+<% end %>

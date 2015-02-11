@@ -1,0 +1,23 @@
+<h1> Tasks </h1>
+
+
+<%= button_to 'New', :controller => "tasks" , :action => "new" %>
+
+<% @task.each do |task| %>
+<table>
+
+    <div>
+        <p>
+            <%= task.activity %><br>
+
+            <%= link_to 'edit', {:controller => "tasks", :action => 'edit',:id => task.id}, :method => :edit %> 
+            <%= link_to 'delete', {:controller => "tasks", :action => 'destroy',:id => task.id}, :method => :delete, data: { confirm: 'Are you sure?' } %> 
+            <%= link_to 'Notes', {:controller => "tasks", :action => 'show',:id => task.id} %> 
+
+        </p>
+            
+    </div>
+  
+</table>
+<%end%>
+
