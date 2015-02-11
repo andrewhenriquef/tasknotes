@@ -42,8 +42,7 @@ class NotesController < ApplicationController
         @note.update(notes_params)
         
         redirect_to :controller => "tasks", :action => 'show', :id => @task
-        #redirect_to :controller => "tasks", :action => 'index'
-        #redirect_to user_url(@user)
+        
     end
     
     def destroy

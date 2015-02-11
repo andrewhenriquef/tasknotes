@@ -31,7 +31,7 @@ class TasksController < ApplicationController
     def edit
        
         @task = Task.find(params[:id])
-        #authorize! :edit
+        
         
     end
     
