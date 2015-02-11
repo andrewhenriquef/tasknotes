@@ -1,5 +1,9 @@
-<h1> New Task </h1>
+<%= link_to 'Back', {:controller => 'tasks', :action => 'index'} %>
 
-<%= render 'form' %>
+<h1  id = "h1NoteNew"> New Task </h1>
 
-<%= link_to 'back', {:controller => 'tasks', :action => 'index'} %>
+<div id="newTask">
+    
+    <%= render 'form' %>
+
+</div>

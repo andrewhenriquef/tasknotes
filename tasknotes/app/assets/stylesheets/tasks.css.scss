@@ -1,3 +1,95 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#geral {
+width: 100%;
+margin-top: -21px;
+background-color: #F1F3EE;
+font-family: ubuntu;
+}
+
+#btnLogout {
+ margin-left: 1200px;
+    margin-bottom: 50px;
+}
+
+#banner h1{
+    text-shadow: 2px 2px 2px #A8ABA5;
+    margin-left: 480px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 50pt;
+}
+
+#conteudoGeral {
+    margin-left: 540px;
+    border: 1px solid black;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+#Notes {
+    margin-left: 550px;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#NomeActivity {
+    margin-left: 547px;
+    text-decoration: underline;
+}
+
+#separacao {
+    height: 2px;
+    width: 500px;
+    margin-left: 400px;
+    background-color: black;
+    
+}
+
+#titleNotes {
+    margin-left: 620px;
+}
+
+#conteudoTabelas {
+    border: 10px solid #B5B5B5;
+    color:black; 
+    margin:20px; 
+    padding:20px;
+    
+}
+
+#editNotes {
+    margin-left: 555px;  
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+
+#divTask {
+    margin-left: 555px;  
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    
+    
+}
+
+#newTask{
+    
+    margin-left: 555px;  
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+#h1NoteNew{
+    
+ margin-left: 580px; 
+
+}
