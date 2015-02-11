@@ -1,4 +1,4 @@
-# tasknotes :)
+# Tasknotes :)
 
 Software para implementação de tarefas. Crie suas tarefas e adicione notas a ela.
 
