@@ -41,7 +41,7 @@ class TasksController < ApplicationController
         @task.update(task_params)
         
         
-        redirect_to :controller => "tasks", :action => 'show', :task_id => '@task'
+        redirect_to :controller => "tasks", :action => 'index', :task_id => '@task'
     end
     
     def destroy

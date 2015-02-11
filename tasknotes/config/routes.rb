@@ -9,8 +9,14 @@ Rails.application.routes.draw do
     post "/tasks/:id/edit" => "tasks#edit"
     
     #/tasks/:id(.:format)                     tasks#show
-
     post "/tasks/:id" => "tasks#show"
+    
+    #/tasks/:task_id/notes/new(.:format)      notes#new
+    post "/tasks/:task_id/notes/new" => "notes#new"
+    
+    
+    #/tasks/:task_id/notes/:id(.:format)	notes#destroy
+    #delete "/tasks/:task_id/notes/:id" => "notes#destroy"
     
     resources :tasks do
         resources :notes

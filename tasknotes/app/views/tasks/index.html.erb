@@ -1,17 +1,35 @@
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+
+<% x = 0%>
 <h1> Tasks </h1>
 
 
-<%= button_to 'New', :controller => "tasks" , :action => "new" %>
+
+<%= button_to 'New task', :controller => "tasks" , :action => "new" %>
+
 
 <% @task.each do |task| %>
-<table>
 
+
+<% if task.id.present? %>
+<table>
+    <% x += 1%>
     <div>
         <p>
+            
+            
             <%= task.activity %><br>
 
             <%= link_to 'edit', {:controller => "tasks", :action => 'edit',:id => task.id}, :method => :edit %> 
-            <%= link_to 'delete', {:controller => "tasks", :action => 'destroy',:id => task.id}, :method => :delete, data: { confirm: 'Are you sure?' } %> 
+            <%= link_to 'destroy', {:controller => "tasks", :action => 'destroy',:id => task.id}, :method => :delete, data: { confirm: 'Are you sure?' } %> 
             <%= link_to 'Notes', {:controller => "tasks", :action => 'show',:id => task.id} %> 
 
         </p>
@@ -20,4 +38,6 @@
   
 </table>
 <%end%>
+<%end%>
 
+<p>tasks number : <%= x%></p>

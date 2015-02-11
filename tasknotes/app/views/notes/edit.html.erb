@@ -1,0 +1,19 @@
+<h1>Editar nota</h1>
+
+<%= form_for([@task, @note]) do |f| %>
+
+    <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+    </p>
+
+    <p>
+        <%= f.label :body %><br>
+        <%= f.text_area :body %>
+    </p>
+
+    <p>
+        <%= f.submit :salvar %>
+    </p>
+
+<% end %>

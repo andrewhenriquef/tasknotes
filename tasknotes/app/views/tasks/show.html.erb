@@ -1,5 +1,39 @@
-<h1> Notes </h1>
-
-<%= @task.activity %>
-
 <%= link_to 'back', {:controller => 'tasks', :action => 'index'} %>
+<h1><%= @task.activity %></h1>
+
+<h2> Notes </h2>
+
+<div>
+    <h2>new note</h2>
+    <%= render 'notes/form'%>
+</div>
+
+<table>
+    <% notesnumber = 0%>
+<% @task.notes.each do |note| %>
+    
+    <p>
+        <th>
+    <% if note.id.present? %>
+        <% notesnumber += 1 %>
+            <div style="background-color:black; color:white; margin:20px; padding:20px;">
+        <!--<td colspan="4">-->
+        <%= note.id %>
+        <%= note.title %><br>
+        <%= note.body %><br>
+        <%= link_to 'edit',{:controller => "notes", :action => 'edit', :task_id => @task.id, :id => note.id.to_s}%>
+
+        <%= link_to 'destroy', {:controller => "notes", :action => 'destroy', :task_id => @task.id, :id => note.id.to_s}, :method => :delete,:confirm => "Are you sure you want to delete this note ?" %>
+    <%end%>
+            </div>
+        </th>
+    </p>
+
+           
+<%end%>
+</table>
+
+<p>note number: <%= notesnumber%></p>
+
+
+
